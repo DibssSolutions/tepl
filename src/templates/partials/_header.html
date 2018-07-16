@@ -1,1 +1,61 @@
-<p>Hello from partials/_header.html</p>
+<header class="top">
+    <div class="top__logo">
+        <img src="img/logo.png" alt="Teplovik-logo">
+    </div>
+    <div class="top__container">
+        <nav class="top__nav">
+            <ul class="top__btn-links">
+                <li>
+                    <a href="#" class="top__btn-link">Каталог</a>
+                </li>
+                <li>
+                    <a href="#" class="top__btn-link">Бренды</a>
+                </li>
+                <li>
+                    <a href="#" class="top__btn-link">Акции</a>
+                </li>
+            </ul>
+            <ul class="top__links">
+                <li>
+                    <a href="#" class="top__link">Доставка</a>
+                </li>
+                <li>
+                    <a href="#" class="top__link">Оплата</a>
+                </li>
+                <li>
+                    <a href="#" class="top__link">О компании</a>
+                </li>
+                <li>
+                    <a href="#" class="top__link">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="top__contacts">
+            <div class="top__phone">
+                +7 (499) 450-41-82
+            </div>
+            <div class="top__working-time">
+                пн–пт: с 9:30 до 18:00 / сб-вс: выходной
+            </div>
+        </div>
+        <div class="top__actions">
+            <ul class="top__actions-list">
+                <li>
+                    <a href="#" class="top__action">{{mixins.icon('user')}}</a>
+                </li>
+                <li>
+                    <a href="#" class="top__action">{{mixins.icon('heart')}}</a>
+                </li>
+                <li>
+                    <a href="#" class="top__action">{{mixins.icon('graph')}}</a>
+                </li>
+                <li>
+                    <a href="#" class="top__action">
+                        {{mixins.icon('cart')}}
+                        <div class="top__action-badge">4</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>

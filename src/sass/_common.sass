@@ -1,5 +1,43 @@
 body
-	background: #FFF
-	+css-lock(16, 50, 600, 1000)
-	line-height: 1.4
+	// line-height: 1.4
+	font-family: $familyOpensans, sans-serif
+	font-size: 14px
+	font-weight: 400
+	+smooth-scroll
+	+smooth-font
+	+prevent-text
 
+image
+	max-width: 100%	
+	height: auto
+
+a
+	text-decoration: none
+	color: inherit
+
+ul 
+	margin: 0
+	padding: 0
+
+
+$grey: #efefef
+
+.plus-minus
+	border-radius: 5px
+	border: solid 1px #dcdcdc
+	&__plus
+		display: inline-block
+		outline: none
+		font-size: 14px
+ 		line-height: 2.14
+	&__minus 
+		display: inline-block
+		outline: none
+		font-size: 14px
+ 		line-height: 2.14
+	&__input 
+		display: inline-block
+		font-size: 14px
+ 		line-height: 2.14
+  		letter-spacing: 0.1px
+		color: #0f2841

@@ -1,0 +1,14 @@
+{% set info = [ {title: 'Популярные бренды', img: 'baxi.png', more: 'Все бренды'}, {title: 'Официальный дилер Rehau', img:
+'rehau.png', more: 'Все документы'}, {title: 'Различные виды оплаты', img: 'card.png', more: 'Подробнее'} ] %}
+
+<section class="info container-inner">
+    <div class="row">
+        {% for item in info %}
+        <div class="info__section">
+            <div class="info__img"><img src="img/brands/{{item.img}}" alt="{{item.title}}"></div>
+            <h5 class="info__title">{{item.title}}</h5>
+            <a href="#" class="info__know-more">{{item.more}}</a>
+        </div>
+        {% endfor %}
+    </div>
+</section>

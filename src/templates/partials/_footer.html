@@ -1,0 +1,67 @@
+{% set shopList = ['Каталог', 'Акции', 'Бренды', 'Личный кабинет'] %} {% set infoList = ['Доставка', 'Оплата', 'О компании',
+'Контакты'] %} {% set contacts = { tel: '+7 (499) 450-41-82', time: 'пн–пт: с 9:30 до 18:00 / сб-вс: выходной', email: 'sale@teplovik.shop',
+adress: 'Москва, 2-ой Западный проезд, дом 1, строение 1' } %}
+
+<footer class="footer">
+    <div class="footer__container container-inner">
+        <div class="footer__row row">
+            <div class="footer__column col2">
+                <h5 class="footer__title">
+                    Магазин
+                </h5>
+                <ul class="footer__list">
+                    {% for item in shopList %}
+                    <li class="footer__list-item">{{item}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="footer__column col3">
+                <h5 class="footer__title">
+                    Информация
+                </h5>
+                <ul class="footer__list">
+                    {% for item in infoList %}
+                    <li class="footer__list-item">{{item}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="footer__column col5">
+                <div class="footer__contacts">
+                    <div class="footer__phone">{{contacts.tel}}</div>
+                    <div class="footer__time">{{contacts.time}}</div>
+                    <div class="footer__email">{{contacts.emil}}</div>
+                    <div class="footer__adress">{{contacts.adress}}</div>
+                </div>
+            </div>
+            <div class="footer__column col2">
+                <div class="footer__social">
+                    <h5 class="footer__title">
+                        Присоедниняйтесь
+                    </h5>
+                    <div class="footer__icons">
+                        <div class="footer__icon">{{mixins.icon('instagram')}}</div>
+                        <div class="footer__icon">{{mixins.icon('vk')}}</div>
+                        <div class="footer__icon">{{mixins.icon('facebook')}}</div>
+                    </div>
+                    <div class="footer__yandex-stat">
+                        <img src="img/yandex.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__row row">
+            <div class="footer__copyright col2">
+                © 2017-2018 Teplovik
+            </div>
+            <div class="footer__policy col3">
+                    Политика конфиденциальности
+                </div>
+            <div class="footer__payments col5">
+                <div class="footer__payment-icon">{{mixins.icon('visa')}}</div>
+                <div class="footer__payment-icon">{{mixins.icon('mastercard')}}</div>
+                <div class="footer__payment-icon">{{mixins.icon('payment3')}}</div>
+                <div class="footer__payment-icon">{{mixins.icon('payment4')}}</div>
+            </div>
+        </div>
+    </div>
+</footer>

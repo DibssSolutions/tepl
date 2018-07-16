@@ -1,0 +1,49 @@
+{% set table = [ {'img': 'Layer-113.jpg', 'title': 'Угольник для радиаторов 1/2', 'articul': 'Артикул:B1HC043', 'price':
+'6 599 руб'} ] %}
+
+<div class="container-inner">
+    <div class="breadcrumbs">
+        <div class="breadcrumb">Главная</div>
+        <div class="breadcrumb">Корзина заказов</div>
+    </div>
+    <main class="order">
+        <h2 class="order__position">
+            <ol>
+                <li>1. Корзина заказов</li>
+                <li>2. Оформление заказа</li>
+            </ol>
+        </h2>
+        <table class="order__table">
+            <thead>
+                <tr>
+                    <th class="order__title">ФОТО</th>
+                    <th class="order__title">НАИМЕНОВАНИЕ</th>
+                    <th class="order__title">ЦЕНА</th>
+                    <th class="order__title">КОЛ-ВО</th>
+                    <th class="order__title">СТОИМОСТЬ</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in table %}
+                <tr>
+                    <td class="order__photo">
+                        <img src="img/products/{{item.img}}" alt="">
+                    </td>
+                    <td class="order__descr">
+                        <span class="order__descr--top">{{item.title}}</span>
+                        <span class="order__descr--bottom">{{item.articul}}</span>
+                    </td>
+                    <td class="order__price">{{item.price}}</td>
+                    <td class="order__amount">
+                        <div class="plus-minus">
+                            <button class="plus-minus__minus">-</button>
+                            <input type="text" class="plus-minus__input" value="1">
+                            <button class="plus-minus__plus">+</button>
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+</div>

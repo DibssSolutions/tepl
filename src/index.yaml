@@ -1,5 +1,9 @@
 ProjectTitle: tepl
 
 PageList:
-- file: page.html
+- file: index.html
   ready: 50
+PageList:
+- file: order1.html
+  ready: 50
+
